@@ -10,7 +10,10 @@ Some of these may be possible using a combination of manipulating bash and neste
 Utility: `go run image_remove.go --name=couchbase --op=remove` removes all containers based on the `couchbase` image instead of using a lengthy, nested docker command/individually searching and stopping the containers. 
 
 3. `none_remove.go` : removes all images with the `<none>` tag, created when another image with the same tag is built.      
-Utility: `go run none_remove.go` removes all such images, which is primarily useful in case of large images.     
+Utility: `go run none_remove.go` removes all such images, which is primarily useful in case of large images.    
+
+4. `n-remove.go` : removes the top `n` most recent containers.  
+Utility: `go run n-remove.go -n=4` removes the top 4 containers.     
 
 ## Prerequisites:
 1. docker
